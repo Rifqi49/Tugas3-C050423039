@@ -23,12 +23,20 @@ cout<<"Masukan angka :";
 
 }
 
-void mPertama(string pesan){
-system("cls");
-cout<<"Selamat Datang di Welcome "<<pesan;
-getch();
+void tampilkanData(int data[], int n){
+  if (n > 0){
+    cout << "Data saat ini: \n";
+    for (int i = 0; i < n;i++) {
+      cout << "Data ke-" << (i + 1) << ": " << data[i] << "\n";
+    }
+  }else {
+    cout << "Data kosong. Masukkan data terlebih dahulu!";
+  }
 }
 
+void sortingAscending(int data[], int n){
+  for
+}
 
 int main() {
 int data[100];
@@ -63,24 +71,10 @@ do
    case '3':
     //mPertama("ke- tiga");
     /* code */
-    void bubble_sort(int data[]){
-      for (int i=1; i<n; i++){
-        for (int j=n-1; j>=i; j--){
-          if(data[j]<data[j-1]) tukar (&data[j], &data[j-1]); //ascending
-        }
-      }
-    }
     break;  
    case '4':
     //mPertama("ke- empat");
     /* code */
-    void bubblesort2(int data[]){
-      for(i=1; i<6; i++){
-        for(int j=0; j<6-i; j++){
-          if(data[j]>data[j+1]) tukar (&data[j], &data[j+1]); //descending
-        }
-      }
-    }
     break;  
   case '5':
     /* code */
