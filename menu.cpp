@@ -59,43 +59,46 @@ void sortingDescending(int data[], int n){
 int main() {
 int data[100];
 char pl;
-do
-{
-    dMenu();
-    pl=getch();
-  switch (pl)
-  {
-   case '1':
-    /* code */
-    //mPertama("pertama");
-    system("cls");
-    cout << "Masukkan jumlah data: ";
+do{
+  dMenu();
+  pl=getch();
+  switch (pl){
+    case '1':{
+      system("cls");
+      cout << "Masukkan jumlah data (1-100): ";
       cin >> n;
-        for (int i=0; i<n; i++){
-          cout << "Masukkan data ke-" << i+1 << ": ";
+      if(n > 0 && n <=100){
+        cout << "Masukkan " << n << "angka: \n";
+        for (int i = 0; i < n; i++){
+          cout << "Data ke-" << (i + 1) << ": ";
           cin >> data[i];
         }
-    break;
-   case '2':
-    //mPertama("ke- dua");
-    /* code */ 
-    system("cls");
-    cout << "Data yang dimasukkan: \n";
-      for(int i=0; i<n; i++){
-        cout << "Data ke-" << i+1 << ": " << data[i] << endl;
+        cout << "\nData berhasil dimasukkan!";
+      }else {
+        cout << "Jumlah data tidak valid. Harus antara 1-100.";
       }
-    getch();
-    break;  
-   case '3':
-    //mPertama("ke- tiga");
-    /* code */
-    break;  
-   case '4':
-    //mPertama("ke- empat");
-    /* code */
-    break;  
-  case '5':
-    /* code */
+      getch();
+      break;
+    }
+    case '2':{
+      system("cls");
+      tampilkanData(data, n);
+      getch();
+      break; 
+    } 
+    case '3':{
+      system("cls");
+      sortingAscending(data, n);
+      getch();
+      break; 
+    } 
+    case '4':{
+      system("cls");
+      sortingDescending(data, n);
+      getch();
+      break; 
+    }  
+    case '5':
     break;
   
   default:
