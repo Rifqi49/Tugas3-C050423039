@@ -35,7 +35,14 @@ void tampilkanData(int data[], int n){
 }
 
 void sortingAscending(int data[], int n){
-  for
+  for (int i = 0; i < n; i++){
+    for (int j = 0; j < n; j++){
+      if (data[j] > data [j + 1]){
+        tukar(&data[j], &data[j + 1]); 
+      }
+    }
+  }
+  cout << "Data berhasil diurutkan secara ascending!";
 }
 
 int main() {
